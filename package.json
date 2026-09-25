@@ -1,0 +1,18 @@
+{
+  "name": "wiki-award-strapi-sync",
+  "version": "1.0.0",
+  "description": "Fetch award show data from Wikipedia and sync it into a Strapi 'awards' collection",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "dotenv": "^16.4.5",
+    "form-data": "^4.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
