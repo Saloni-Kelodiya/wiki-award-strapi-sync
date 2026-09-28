@@ -19,6 +19,10 @@ async function run(wikiUrl) {
     console.warn(`   ⚠️  ${warning}`);
   }
 
+  if (categoryCount === 0 || payload.awardCategories.length === 0) {
+    throw new Error('No award categories were parsed; refusing to create an empty award entry.');
+  }
+
   console.log('   Uploading main poster image...');
   const mainImageId = await uploadImageFromUrl(
     imageUrl,
@@ -26,6 +30,9 @@ async function run(wikiUrl) {
     config.STRAPI_TOKEN,
     `${pageTitle}-poster`
   );
+  if (imageUrl && !mainImageId) {
+    throw new Error('Main poster upload failed; award was not created. Check the Strapi server log for the upload error.');
+  }
   payload.image = mainImageId;
 
   // Upload any winner/nominee images that buildPayload found (only present
