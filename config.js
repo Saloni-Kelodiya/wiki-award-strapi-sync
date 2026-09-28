@@ -4,7 +4,7 @@ module.exports = {
   STRAPI_URL: (process.env.STRAPI_URL || 'http://localhost:1337').replace(/\/$/, ''),
   STRAPI_TOKEN: process.env.STRAPI_TOKEN || '',
   GEMINI_API_KEY: process.env.GEMINI_API_KEY || '',
-  GEMINI_MODEL: process.env.GEMINI_MODEL || 'gemini-2.5-flash',
+  GEMINI_MODEL: process.env.GEMINI_MODEL || 'gemini-3.5-flash',
 
   // ---------------------------------------------------------------------
   // EDIT THIS: map keywords (found in the award-show title/URL) to the
