@@ -3,6 +3,8 @@ require('dotenv').config();
 module.exports = {
   STRAPI_URL: (process.env.STRAPI_URL || 'http://localhost:1337').replace(/\/$/, ''),
   STRAPI_TOKEN: process.env.STRAPI_TOKEN || '',
+  OPENAI_API_KEY: process.env.OPENAI_API_KEY || '',
+  OPENAI_MODEL: process.env.OPENAI_MODEL || 'gpt-5.6-luna',
 
   // ---------------------------------------------------------------------
   // EDIT THIS: map keywords (found in the award-show title/URL) to the
